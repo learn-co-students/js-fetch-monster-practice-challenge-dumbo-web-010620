@@ -39,13 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // broken event listeners
     findForwardButton.addEventListener("click", event => {
-        page += 1
-        getMonsters()
+        if (page <= 19){
+            alert("No more monsters to show")
+        } else {
+            getMonsters() 
+            page += 1   
+        }
     })
 
     findBackButton.addEventListener("click", event => {
-        page -= 1
-        getMonsters()
+        if (page === 1) {
+            alert("Can't go back anymore")
+        } else {
+            page -= 1
+            getMonsters()
+        }
+     
     })
 
     // run fetch

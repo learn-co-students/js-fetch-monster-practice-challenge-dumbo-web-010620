@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     findCreateMonster.append(createForm)
 
 
-    // event listeners
+    // broken event listeners
     findForwardButton.addEventListener("click", event => {
         page += 1
         getMonsters()
